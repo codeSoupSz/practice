@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/_01_dataStructure/_01_dataStructure.iml" filepath="$PROJECT_DIR$/_01_dataStructure/_01_dataStructure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_99_exercise/_99_exercise.iml" filepath="$PROJECT_DIR$/_99_exercise/_99_exercise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/practice.iml" filepath="$PROJECT_DIR$/practice.iml" />
+    </modules>
+  </component>
+</project>

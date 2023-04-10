@@ -1,0 +1,6 @@
+# Project exclude paths
+/_00_common/_04_springSecurityTokenDemo/target/
+/_02_easyExcelDemo/target/
+/_03_springSecurityDemo/target/
+/out/
+/randomNameApp/target/

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <directory url="file://$PROJECT_DIR$/maven-test/src/main/resources/archetype-resources" includeSubdirectories="true" />
+    </excludeFromCompile>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="_02_easyExcelDemo" />
+        <module name="_03_springSecurityDemo" />
+        <module name="_04_springSecurityTokenDemo" />
+        <module name="randomNameApp" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="maven-test" target="1.8" />
+      <module name="randomName" target="1.8" />
+      <module name="sourceCode-ArrayList" target="1.8" />
+      <module name="untitled" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="_00_common" options="" />
+      <module name="_02_easyExcelDemo" options="-parameters" />
+      <module name="_03_springSecurityDemo" options="-parameters" />
+      <module name="_04_springSecurityTokenDemo" options="-parameters" />
+      <module name="randomNameApp" options="-parameters" />
+    </option>
+  </component>
+</project>

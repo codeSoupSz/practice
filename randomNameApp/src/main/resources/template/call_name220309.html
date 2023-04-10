@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>随机点名</title>
+    <script type="text/javascript">
+	// ,"陈乐京","谢宁斌","谭周业","秦寅初","王素素","成帅  ","刘培磊"
+    var isRun=true;
+    var a = ["曾灿彬","侯玉豪","焦腾飞","蔡青松","朱祥恒","刘杰  ","卢文博","赵辉  ","孙喜成","戴建力","刘正  ","谢信欢","张军  ","陈锴  ","张敏  ","侯存涛","牛开原","宁志威","张学武","马乐乐","曾标  ","廖润民","梁伊民","陈琦  ","罗桐  ","李明庚","陈乐轩","刘少帅","钟思  ","郑辉翔","肖世元","梁旭东","彭杰  ","肖辰  ","彭子平","蒋志鑫","周元聪","高松坡","余鼎  ","习敏  ","陈旭林","余凯文","赖运贵","朱旭  ","李志辉","宋洲  ","李观明","梅旺旺","陈义锱","程泊策","邓瑞虎","肖文卓","杨予之","许康杰","刘良驿","蔡超  ","梅伟  ","余柯柯","李琪  ","段永星","杜岳华","史翔  ","卢桂峰","马伟佳","黄培涛","郑明田","吴军  ","罗晓辉","龚俊辉","谢传鹏","曹旭阳","罗强  ","魏宗科","曾雯庭","杜月华"];
+    var a2 = new Array();
+    function action(str){
+        var s = document.getElementById("bt").value;
+        if(s=="开始"){
+            isRun=true;
+            run();
+            document.getElementById("bt").value="结束";
+        }else{
+            isRun=false;
+            document.getElementById("bt").value="开始";
+        }
+    }
+    function run(){
+        var i = Math.floor(Math.random() * a.length+ 1)-1;
+        document.getElementById("show").innerHTML=a[i];
+        if(isRun==false){
+            var b =true;
+            for(var j in a2){
+                if(a2[j]==i){
+                    b=false;
+                }
+            }
+            if(b){
+                a2[a2.length]=i;
+                return;
+            }
+        }
+        setTimeout("run()",10);
+    }
+</script>
+ 
+</head>
+
+<body>
+	<h1>选人</h1>
+    <div style="text-align:center; margin-top:100px;width:100%;">
+        <div id="show" style="margin:auto;font-size:20px;width:100%;height:30px; background:#FFEEFF"></div>
+        <div style="margin-top:20px;">
+            <input id="bt" type="button" onclick="action()" value="开始"/>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- 王春平，朱嘉莹，舒莹，祝奕彬 -->
