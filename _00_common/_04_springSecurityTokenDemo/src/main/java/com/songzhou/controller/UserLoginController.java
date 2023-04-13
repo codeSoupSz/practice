@@ -17,4 +17,8 @@ public class UserLoginController {
 
         return loginService.login(user);
     }
+    @RequestMapping("/user/logout")
+    public ResponseResult logout(){
+        return loginService.logout();
+    }
 }

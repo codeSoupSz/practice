@@ -13,4 +13,12 @@ public interface LoginService {
      * @return
      */
     ResponseResult login(User user);
+
+    /**
+     * 退出登录
+     * 1、从Security上下文获取用户信息
+     * 2、去Redis删除对应用户信息
+     * @return
+     */
+    ResponseResult logout();
 }
