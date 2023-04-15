@@ -10,3 +10,5 @@ spring:
     host: 39.108.120.239
     port: 6379
     password: '000415'
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml

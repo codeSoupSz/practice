@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import java.util.List;
+
 @SpringBootTest
 public class Demo {
     @Autowired
@@ -24,4 +26,10 @@ public class Demo {
         String encode = passwordEncoder.encode("123456");
         System.out.println("encode = " + encode);
     }
+    @Test
+    public void testQueryForAuthorities(){
+        List<String> list = userMapper.queryForAuthorities(3L);
+        System.out.println(list);
+    }
+
 }

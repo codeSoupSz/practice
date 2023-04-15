@@ -26,7 +26,7 @@ public class UserDetailServiceImpl  implements UserDetailsService {
         User user = userMapper.selectOne(new QueryWrapper<User>().eq("user_name", username));
         if (ObjectUtils.isEmpty(user))
             throw new RuntimeException("登录账号或者密码错误！");
-        List<String> permissions = Arrays.asList("test");
+        List<String> permissions = userMapper.queryForAuthorities(user.getId());
         return new LoginUser(user,permissions);
     }
 }
