@@ -56,6 +56,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.addFilterBefore(myTokenFilter, UsernamePasswordAuthenticationFilter.class);
         //将自定义的认证、鉴权异常处理器配到SpringSecurity
         http.exceptionHandling().authenticationEntryPoint(authenticationEntryPoint).accessDeniedHandler(accessDeniedHandler);
+        //对SpringSecurity允许跨域
+        http.cors();
     }
 
     /**

@@ -14,4 +14,11 @@ public class HelloController {
     public String hello(){
         return "Hello SpringSecurity";
     }
+
+
+    @RequestMapping("/testCors")
+    @PreAuthorize("hasAuthority('lib:delete')")
+    public String testCors(){
+        return "Hello testCors";
+    }
 }
