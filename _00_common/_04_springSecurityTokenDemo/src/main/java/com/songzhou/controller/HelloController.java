@@ -18,4 +18,10 @@ public class HelloController {
     public String testCors(){
         return "Hello testCors";
     }
+
+    @RequestMapping("/testMyExpression")
+    @PreAuthorize("@myAuthenticateExpression.ownAuthority('lib')") //※在SPEL表达式中使用 @myAuthenticateExpression相当于获取容器中bean的名字未ex的对象。然后再调用这个对象的ownAuthority方法
+    public String testMyExpression(){
+        return "Hello testMyExpression";
+    }
 }
