@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.work.easyExcel.mapper.StudentMapper">
+<!--    void batchSave(@Param("studentList") List<Student> cachedDataList);-->
+    <insert id="batchSave">
+        insert into t_student (gender,name) values
+        <foreach collection="studentList" item="student" separator=",">
+            (#{student.gender},#{student.name})
+        </foreach>
+    </insert>
+
+
+    <select id="queryAll" resultType="com.work.easyExcel.entity.Student">
+        select * from t_student
+    </select>
+</mapper>
+
+

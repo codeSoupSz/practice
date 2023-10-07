@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.songzhou.mapper.UserMapper">
+
+
+    <select id="queryForAuthorities" resultType="java.lang.String">
+        SELECT DISTINCT
+            perms
+        FROM
+            sys_user_role t1
+                LEFT JOIN sys_role t2 ON t1.role_id = t2.id
+                LEFT JOIN sys_role_menu t3 ON t2.id = t3.role_id
+                LEFT JOIN sys_menu t4 ON t3.menu_id = t4.id
+        WHERE
+            t1.user_id = #{id}
+          AND t2.`status` = 0
+          AND t4.`status` = 0;
+    </select>
+</mapper>
