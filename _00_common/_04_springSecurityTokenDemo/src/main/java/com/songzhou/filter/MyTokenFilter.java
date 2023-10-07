@@ -1,6 +1,5 @@
 package com.songzhou.filter;
 
-import com.alibaba.fastjson.parser.ParserConfig;
 import com.songzhou.domain.LoginUser;
 import com.songzhou.utils.JwtUtil;
 import com.songzhou.utils.RedisCache;
@@ -47,7 +46,6 @@ public class MyTokenFilter extends OncePerRequestFilter {
 
         //3、获取用户完整信息，存入security上下文
         LoginUser loginUser = redisCache.getCacheObject("login:" + userid);
-        //TODO 权限信息待装入
         if (ObjectUtils.isEmpty(loginUser))
             throw new RuntimeException("token无效");
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(loginUser, null, loginUser.getAuthorities());

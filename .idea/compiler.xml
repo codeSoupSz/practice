@@ -12,6 +12,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="_02_easyExcelDemo" />
         <module name="_03_springSecurityDemo" />
+        <module name="_05_design_pattern" />
         <module name="_04_springSecurityTokenDemo" />
         <module name="randomNameApp" />
       </profile>
@@ -29,6 +30,7 @@
       <module name="_02_easyExcelDemo" options="-parameters" />
       <module name="_03_springSecurityDemo" options="-parameters" />
       <module name="_04_springSecurityTokenDemo" options="-parameters" />
+      <module name="_05_design_pattern" options="-parameters" />
       <module name="randomNameApp" options="-parameters" />
     </option>
   </component>
