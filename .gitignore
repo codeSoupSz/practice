@@ -1,6 +1,19 @@
-# Project exclude paths
-/_00_common/_04_springSecurityTokenDemo/target/
-/_02_easyExcelDemo/target/
-/_03_springSecurityDemo/target/
-/out/
-/randomNameApp/target/
+/*.iml
+/*.ipr
+/*.iws
+/.classpath
+/.factorypath
+/.idea
+/.project
+/.settings
+/nb*
+/release.properties
+/target
+
+# These are needed if running in IDE without properties set
+/ibderby
+derby.log
+/bin/
+.mvn/wrapper/maven-wrapper.jar
+.sts4-cache/
+*.releaseBackup
